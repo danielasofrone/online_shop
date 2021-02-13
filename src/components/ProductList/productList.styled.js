@@ -5,6 +5,6 @@ export const ProductList = styled.div`
   float: left;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 15px;
-  row-gap: 15px;
+  column-gap: 30px;
+  row-gap: 30px;
 `;

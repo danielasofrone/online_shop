@@ -3,11 +3,15 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { showTotalAmount } from "../../shared/utils";
 import CartProductCard from "../SlideShoppingCart/CartProductCard/CartProductCard";
+import close from '../../assets/icons/close.svg'
 import * as S from "./slideShoppingCart.styled";
 
 const SlideShoppingCart = ({ shoppingCart }) => {
   return (
     <S.ProductsContainer>
+       <S.IconContainer>
+      <S.Icon src={close}></S.Icon>
+      </S.IconContainer>
       {shoppingCart.map(product => (
         <CartProductCard
           key={product.id}
@@ -15,9 +19,9 @@ const SlideShoppingCart = ({ shoppingCart }) => {
           quantity={product.quantity}
         />
       ))}
-      <p>
+      <S.TotalPrice>
         Total: <strong>{showTotalAmount(shoppingCart)}</strong>
-      </p>
+        </S.TotalPrice>
     </S.ProductsContainer>
   );
 };

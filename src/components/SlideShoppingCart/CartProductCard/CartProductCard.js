@@ -33,7 +33,7 @@ const CartProductCard = ({
 
       <S.ProductPrice>
         <button onClick={() => handleUpdateQuantity("remove")}>-</button>
-        {quantity} <button onClick={() => handleUpdateQuantity()}>+</button>
+        {""} {quantity}{""} <button onClick={() => handleUpdateQuantity()}>+</button>
       </S.ProductPrice>
       <S.RemoveProduct onClick={() => removeProductFromCart(product.id)}>
         Remove

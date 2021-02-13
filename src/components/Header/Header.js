@@ -8,6 +8,9 @@ import * as S from "./header.styled";
 const Header = ({ shoppingCart }) => {
   return (
     <S.Header>
+      <S.Logo>
+       <h2> The Corner Shop</h2>
+      </S.Logo>
       <SlideShoppingCart />
       <S.ShoppingCartButton>
         <svg

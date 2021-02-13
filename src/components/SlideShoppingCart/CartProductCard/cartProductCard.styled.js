@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const ProductCard = styled.div`
   width: 100%;
-  height: 100px;
+  height: auto;
+  padding: 5px;
   float: left;
   background-color: #ffff;
   margin-bottom: 15px;
@@ -29,6 +30,7 @@ export const ProductTitle = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: 'Open Sans', sans-serif;
 `;
 
 export const ProductPrice = styled.div`
@@ -44,4 +46,5 @@ export const RemoveProduct = styled.div`
   float: left;
   text-align: right;
   color: red;
+  font-family: 'Open Sans', sans-serif;
 `;

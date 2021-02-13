@@ -24,10 +24,12 @@ export const ProductImage = styled.div`
 `;
 
 export const CardContent = styled.div`
+  font-family: 'Open Sans', sans-serif;
   width: 100%;
   float: left;
   padding: 15px;
   flex-grow: 1;
+  
 `;
 
 export const PriceTag = styled.div`
@@ -40,6 +42,7 @@ export const PriceTag = styled.div`
   float: left;
   padding: 10;
   color: white;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 `;
 
@@ -57,5 +60,6 @@ export const AddButton = styled.div`
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  font-family: 'Open Sans', sans-serif;
   background-color: ${({ favorite }) => (favorite ? "#e6e6ff" : " #977fd7")};
 `;

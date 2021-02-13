@@ -10,6 +10,20 @@ export const Header = styled.header`
   background-color: #000;
 `;
 
+export const Logo = styled.div`
+  float: left;
+  margin-left: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+   h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+   }
+ 
+`;
+
 export const ItemsCountBubble = styled.header`
   width: 20px;
   height: 20px;
@@ -18,6 +32,7 @@ export const ItemsCountBubble = styled.header`
   background-color: #fff;
   border-radius: 50%;
   border: 2px solid #977fd7;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +71,7 @@ export const ShoppingCartButton = styled.div`
     ${ItemsCountBubble} {
       background-color: #977fd7;
       border: 2px solid #ffffff;
+      font-family: 'Open Sans', sans-serif;
       color: #ffffff;
     }
   }
