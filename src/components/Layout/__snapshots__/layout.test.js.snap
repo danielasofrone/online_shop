@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders without crashing given the required props 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <img
+        alt="PiNCAMP Logo"
+        src="logo.svg"
+        title="PiNCAMP"
+      />
+    </styled.div>
+    <styled.div>
+      Mock Container
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
