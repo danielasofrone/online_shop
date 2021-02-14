@@ -24,13 +24,13 @@ export const Logo = styled.div`
 `;
 
 export const ItemsCountBubble = styled.header`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   position: absolute;
   z-index: 2;
   background-color: #fff;
   border-radius: 50%;
-  border: 2px solid #977fd7;
+  border: 2px solid #333;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
@@ -47,13 +47,13 @@ export const ShoppingCartButton = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #977fd7;
+  background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   svg {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     path {
       fill: white;
       transition: all 0.2s linear;
@@ -62,13 +62,14 @@ export const ShoppingCartButton = styled.div`
 
   &:hover {
     background-color: #fff;
+    border: 1px solid #000;
     svg {
       path {
-        fill: #977fd7;
+        fill: #333;
       }
     }
     ${ItemsCountBubble} {
-      background-color: #977fd7;
+      background-color: #333;
       border: 2px solid #ffffff;
       font-family: 'Open Sans', sans-serif;
       color: #ffffff;

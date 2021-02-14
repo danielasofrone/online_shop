@@ -14,7 +14,7 @@ export const ProductImage = styled.div`
   height: 100%;
   width: 100px;
   float: left;
-  background-color: white;
+  background-color: #fff;
   padding: 15px;
   img {
     height: 100%;

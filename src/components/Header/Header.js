@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import SlideShoppingCart from '../SlideShoppingCart/SlideShoppingCart';
@@ -6,13 +6,15 @@ import {calculateCartProductQuantity} from '../../shared/utils';
 import * as S from './header.styled';
 
 const Header = ({shoppingCart}) => {
+  const [openSlideCart] = useState(false);
+
   return (
     <S.Header>
       <S.Logo>
         <h2> The Corner Shop</h2>
       </S.Logo>
       <SlideShoppingCart />
-      <S.ShoppingCartButton>
+      <S.ShoppingCartButton onClick={() => openSlideCart(true)}>
         <svg
           x="0px"
           y="0px"

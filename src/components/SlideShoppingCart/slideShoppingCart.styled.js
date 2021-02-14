@@ -8,10 +8,17 @@ export const ProductsContainer = styled.div`
   background: #fff;
   opacity: 1;
   height: 100vh;
-  padding: 100px 40px 40px 40px;
-  overflow-x: auto;
+
   border: 1px solid #333;
   z-index: 99;
+  cursor: pointer;
+`;
+
+export const ProductsSubcontainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const BackButtonContainer = styled.div`
@@ -24,8 +31,13 @@ export const BackButtonContainer = styled.div`
   float: left;
   top: 0;
   left: 0;
-  vertical-align: middle;
+  background-color: #fff;
   cursor: pointer;
+`;
+
+export const ItemsContainer = styled.div`
+  overflow-y: auto;
+  padding: 100px 40px 40px 40px;
 `;
 
 export const BackButton = styled.div`
@@ -48,8 +60,8 @@ export const Icon = styled.img`
 `;
 
 export const BottomContainer = styled.div`
-  height: 100px;
   position: absolute;
+  height: auto;
   width: 100%;
   border-top: 1px solid #d0d0d0;
   bottom: 0;
@@ -65,4 +77,5 @@ export const TotalPrice = styled.div`
   color: #333;
   margin-top: 20px;
   margin-left: 15px;
+  padding-bottom: 30px;
 `;
