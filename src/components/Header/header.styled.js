@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Header = styled.header`
   width: 100%;
@@ -16,12 +16,11 @@ export const Logo = styled.div`
   color: #fff;
   margin-bottom: 20px;
   cursor: pointer;
-   h2 {
+  h2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 30px;
-   }
- 
+  }
 `;
 
 export const ItemsCountBubble = styled.header`

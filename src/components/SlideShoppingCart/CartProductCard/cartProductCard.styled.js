@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProductCard = styled.div`
   width: 100%;
@@ -7,7 +7,7 @@ export const ProductCard = styled.div`
   float: left;
   background-color: #ffff;
   margin-bottom: 30px;
-  border-bottom: 1px solid 	#D0D0D0;
+  border-bottom: 1px solid #d0d0d0;
 `;
 
 export const ProductImage = styled.div`

@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Header from "../Header/Header";
-import * as S from "./layout.styled";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Header from '../Header/Header';
+import * as S from './layout.styled';
 
-const Layout = ({ children }) => (
+const Layout = ({children}) => (
   <S.MainWrapper>
     <Header />
     <S.ContentWrapper>{children}</S.ContentWrapper>
@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.object.isRequired,
 };
 
 export default Layout;

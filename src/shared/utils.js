@@ -10,11 +10,11 @@ export const showTotalAmount = products => {
 export const checkQuantity = (product, shoppingCart, type) => {
   let newProduct = {
     ...product,
-    quantity: 1
+    quantity: 1,
   };
 
   const addOrRemove = quantity => {
-    return type === "remove" ? quantity - 1 : quantity + 1;
+    return type === 'remove' ? quantity - 1 : quantity + 1;
   };
 
   const productExists = shoppingCart.filter(
@@ -24,7 +24,7 @@ export const checkQuantity = (product, shoppingCart, type) => {
   if (productExists.length) {
     newProduct = {
       ...product,
-      quantity: addOrRemove(productExists[0].quantity)
+      quantity: addOrRemove(productExists[0].quantity),
     };
   }
 

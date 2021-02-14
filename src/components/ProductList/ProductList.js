@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ProductCard from "../ProductCard/ProductCard";
-import productsData from "../../data/products.json";
-import * as S from "./productList.styled";
+import React from 'react';
+import PropTypes from 'prop-types';
+import ProductCard from '../ProductCard/ProductCard';
+import productsData from '../../data/products.json';
+import * as S from './productList.styled';
 
-const ProductList = ({ products }) => {
+const ProductList = ({products}) => {
   return (
     <S.ProductList>
       {products.map(product => (
@@ -15,11 +15,11 @@ const ProductList = ({ products }) => {
 };
 
 ProductList.defaultProps = {
-  products: productsData
+  products: productsData,
 };
 
 ProductList.propTypes = {
-  products: PropTypes.array
+  products: PropTypes.array,
 };
 
 export default ProductList;

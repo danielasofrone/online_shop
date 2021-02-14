@@ -1,15 +1,15 @@
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import SlideShoppingCart from "../SlideShoppingCart/SlideShoppingCart";
-import { calculateCartProductQuantity } from "../../shared/utils";
-import * as S from "./header.styled";
+import React from 'react';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import SlideShoppingCart from '../SlideShoppingCart/SlideShoppingCart';
+import {calculateCartProductQuantity} from '../../shared/utils';
+import * as S from './header.styled';
 
-const Header = ({ shoppingCart }) => {
+const Header = ({shoppingCart}) => {
   return (
     <S.Header>
       <S.Logo>
-       <h2> The Corner Shop</h2>
+        <h2> The Corner Shop</h2>
       </S.Logo>
       <SlideShoppingCart />
       <S.ShoppingCartButton>
@@ -46,15 +46,15 @@ const Header = ({ shoppingCart }) => {
 };
 
 Header.defaultProps = {
-  shoppingCart: 0
+  shoppingCart: 0,
 };
 
 Header.propTypes = {
-  shoppingCart: PropTypes.array
+  shoppingCart: PropTypes.array,
 };
 
-const mapStateToProps = ({ shoppingCart }) => ({
-  shoppingCart
+const mapStateToProps = ({shoppingCart}) => ({
+  shoppingCart,
 });
 
 export default connect(mapStateToProps)(Header);
