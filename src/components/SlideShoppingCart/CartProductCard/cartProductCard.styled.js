@@ -6,7 +6,8 @@ export const ProductCard = styled.div`
   padding: 5px;
   float: left;
   background-color: #ffff;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid 	#D0D0D0;
 `;
 
 export const ProductImage = styled.div`
