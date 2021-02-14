@@ -1,15 +1,16 @@
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { addToCart, updateCart } from "../../store/actions/index";
-import { checkQuantity } from "../../shared/utils";
-import * as S from "./productCard.styled";
+import React from 'react';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import {addToCart, updateCart} from '../../store/actions/index';
+import {checkQuantity} from '../../shared/utils';
+import heart from '../../assets/icons/heart.svg';
+import * as S from './productCard.styled';
 
 const ProductCard = ({
   addProductToCart,
   updateProductInCart,
   product,
-  shoppingCart
+  shoppingCart,
 }) => {
   const handleAddProduct = () => {
     const updatedProduct = checkQuantity(product, shoppingCart);
@@ -24,15 +25,19 @@ const ProductCard = ({
     <S.Card>
       <S.ProductImage>
         <img src={product.image} alt="" />
-        <S.PriceTag> {product.price}</S.PriceTag>
       </S.ProductImage>
       <S.CardContent>
-        <h2>{product.title}</h2>
+        <S.TextContainer>{product.title}</S.TextContainer>
+        <S.PriceTag>
+          € {''} {product.price}
+        </S.PriceTag>
       </S.CardContent>
       <S.CardFooter>
-        <S.AddButton favorite>Add to favorites</S.AddButton>
+        <S.FavoritesButton favorite>
+          <S.Icon src={heart} />
+        </S.FavoritesButton>
         <S.AddButton onClick={() => handleAddProduct()}>
-          Add to shopping cart
+          Add to cart
         </S.AddButton>
       </S.CardFooter>
     </S.Card>
@@ -42,16 +47,16 @@ ProductCard.propTypes = {
   addProductToCart: PropTypes.func.isRequired,
   product: PropTypes.object.isRequired,
   shoppingCart: PropTypes.array.isRequired,
-  updateProductInCart: PropTypes.func.isRequired
+  updateProductInCart: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = ({ shoppingCart }) => ({
-  shoppingCart
+const mapStateToProps = ({shoppingCart}) => ({
+  shoppingCart,
 });
 
 const mapDispatchToProps = dispatch => ({
   addProductToCart: product => dispatch(addToCart(product)),
-  updateProductInCart: product => dispatch(updateCart(product))
+  updateProductInCart: product => dispatch(updateCart(product)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductCard);

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Card = styled.div`
   width: 100%;
@@ -7,6 +7,16 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: box-shadow 200ms cubic-bezier(0.02, 0.01, 0.47, 1),
+    transform 200ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  color: #4b4f56;
+  &:hover,
+  &:focus {
+    transform: scale3d(1.05, 1.05, 1);
+    &::after {
+      opacity: 1;
+    }
+  }
 `;
 
 export const ProductImage = styled.div`
@@ -29,19 +39,19 @@ export const CardContent = styled.div`
   float: left;
   padding: 15px;
   flex-grow: 1;
-  
+`;
+
+export const TextContainer = styled.div`
+  font-family: 'Open Sans', sans-serif;
+  line-height: 25px;
+  font-size: 20px;
+  color: #333;
 `;
 
 export const PriceTag = styled.div`
-  width: auto;
-  position: absolute;
-  background-color: red;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
+  color: red;
   float: left;
-  padding: 10;
-  color: white;
+  margin-top: 10px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 `;
@@ -50,16 +60,37 @@ export const CardFooter = styled.div`
   width: 100%;
   float: left;
   display: flex;
+  height: 60px;
 `;
 
 export const AddButton = styled.div`
   width: 100%;
-  display: flex;
-  height: 100px;
+  flex: 3;
+  line-height: 60px;
   text-align: center;
   cursor: pointer;
   justify-content: center;
   align-items: center;
   font-family: 'Open Sans', sans-serif;
-  background-color: ${({ favorite }) => (favorite ? "#e6e6ff" : " #977fd7")};
+  border-top: 1px solid #d0d0d0;
+`;
+
+export const FavoritesButton = styled.div`
+  border-top: 1px solid #d0d0d0;
+  border-right: 1px solid #d0d0d0;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #333;
+`;
+
+export const Icon = styled.img`
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px 10px 15px;
 `;

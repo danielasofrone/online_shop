@@ -38,14 +38,27 @@ export const ProductPrice = styled.div`
   width: calc(100% - 100px);
   padding: 0 15px;
   float: left;
-  color: red;
+  color: #333;
 `;
 
-export const RemoveProduct = styled.div`
+export const ProductQuantity = styled.div`
+  color: #333;
   width: calc(100% - 100px);
   padding: 0 15px;
   float: left;
-  text-align: right;
-  color: red;
+  flex: 1;
+`;
+
+export const ChangeQuantityButton = styled.button`
+  margin-top: 10px;
+`;
+
+export const RemoveProduct = styled.div`
+  flex: 1;
+  width: calc(100% - 100px);
+  padding: 0 15px;
+  float: left;
+  /* text-align: right; */
+  color: #333;
   font-family: 'Open Sans', sans-serif;
 `;

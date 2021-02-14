@@ -30,12 +30,16 @@ const CartProductCard = ({
       </S.ProductImage>
       <S.ProductTitle>{product.title}</S.ProductTitle>
       <S.ProductPrice>€ {product.price}</S.ProductPrice>
-
-      <S.ProductPrice>
-        <button onClick={() => handleUpdateQuantity('remove')}>-</button>
+      <S.ProductQuantity>
+        <S.ChangeQuantityButton onClick={() => handleUpdateQuantity('remove')}>
+          -
+        </S.ChangeQuantityButton>
         {''} {quantity}
-        {''} <button onClick={() => handleUpdateQuantity()}>+</button>
-      </S.ProductPrice>
+        {''}{' '}
+        <S.ChangeQuantityButton onClick={() => handleUpdateQuantity()}>
+          +
+        </S.ChangeQuantityButton>
+      </S.ProductQuantity>
       <S.RemoveProduct onClick={() => removeProductFromCart(product.id)}>
         Remove
       </S.RemoveProduct>
