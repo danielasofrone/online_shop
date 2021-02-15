@@ -6,36 +6,39 @@ import CartProductCard from '../SlideShoppingCart/CartProductCard/CartProductCar
 import leftArow from '../../assets/icons/leftArow.svg';
 import * as S from './slideShoppingCart.styled';
 
-const SlideShoppingCart = ({shoppingCart}) => {
+const SlideShoppingCart = ({shoppingCart, closeCart}) => {
   return (
     <S.ProductsContainer>
       <S.ProductsSubcontainer>
-        <S.BackButtonContainer>
+        <S.BackButtonContainer onClick={closeCart}>
           <S.Icon src={leftArow}></S.Icon>
           <S.BackButtonText>CONTINUE SHOPPING</S.BackButtonText>
         </S.BackButtonContainer>
         <S.ItemsContainer>
-          {shoppingCart.map(product => (
-            <CartProductCard
-              key={product.id}
-              product={product}
-              quantity={product.quantity}
-            />
-          ))}
+          {shoppingCart.length === 0 ? (
+            <S.IfCartEmpty>Your cart is currently empty.</S.IfCartEmpty>
+          ) : (
+            shoppingCart.map(product => (
+              <CartProductCard
+                key={product.id}
+                product={product}
+                quantity={product.quantity}
+              />
+            ))
+          )}
         </S.ItemsContainer>
-        {shoppingCart.length > 0 && (
-          <S.BottomContainer>
-            <S.TotalPrice>
-              Subtotal: <strong>{showTotalAmount(shoppingCart)}</strong>
-            </S.TotalPrice>
-          </S.BottomContainer>
-        )}
+        <S.BottomContainer>
+          <S.TotalPrice>
+            Subtotal: <strong>{showTotalAmount(shoppingCart)}</strong>
+          </S.TotalPrice>
+        </S.BottomContainer>
       </S.ProductsSubcontainer>
     </S.ProductsContainer>
   );
 };
 SlideShoppingCart.propTypes = {
   shoppingCart: PropTypes.array.isRequired,
+  closeCart: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = ({shoppingCart}) => ({

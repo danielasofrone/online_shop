@@ -79,3 +79,12 @@ export const TotalPrice = styled.div`
   margin-left: 15px;
   padding-bottom: 30px;
 `;
+
+export const IfCartEmpty = styled.div`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #d0d0d0;
+
+  margin: 20px 0 0 20px;
+`;

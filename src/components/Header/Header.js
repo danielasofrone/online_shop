@@ -6,15 +6,24 @@ import {calculateCartProductQuantity} from '../../shared/utils';
 import * as S from './header.styled';
 
 const Header = ({shoppingCart}) => {
-  const [openSlideCart] = useState(false);
+  const [openSlideCart, setOpenSlideCart] = useState(false);
+
+  const handleCloseCart = () => {
+    setOpenSlideCart(false);
+  };
+
+  const handleOpenCart = () => {
+    setOpenSlideCart(true);
+  };
 
   return (
     <S.Header>
       <S.Logo>
         <h2> The Corner Shop</h2>
       </S.Logo>
-      <SlideShoppingCart />
-      <S.ShoppingCartButton onClick={() => openSlideCart(true)}>
+
+      {openSlideCart && <SlideShoppingCart closeCart={handleCloseCart} />}
+      <S.ShoppingCartButton onClick={handleOpenCart}>
         <svg
           x="0px"
           y="0px"

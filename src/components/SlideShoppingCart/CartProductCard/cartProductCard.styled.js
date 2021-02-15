@@ -51,14 +51,16 @@ export const ProductQuantity = styled.div`
 
 export const ChangeQuantityButton = styled.button`
   margin-top: 10px;
+  margin-bottom: 5px;
 `;
 
 export const RemoveProduct = styled.div`
   flex: 1;
   width: calc(100% - 100px);
   padding: 0 15px;
-  float: left;
-  /* text-align: right; */
+  text-align: right;
+  float: right;
+  margin-top: -25px;
   color: #333;
   font-family: 'Open Sans', sans-serif;
 `;
