@@ -64,6 +64,8 @@ export const Icon = styled.img`
 
 export const BottomContainer = styled.div`
   position: absolute;
+  display: flex;
+  flex-direction: column;
   height: auto;
   width: 100%;
   border-top: 1px solid #d0d0d0;
@@ -73,14 +75,34 @@ export const BottomContainer = styled.div`
   background-color: #fff;
 `;
 
-export const TotalPrice = styled.div`
+export const TotalPriceContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const TotalPriceText = styled.div`
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
   color: #333;
   margin-top: 20px;
-  margin-left: 15px;
+  margin-left: 20px;
   padding-bottom: 30px;
+`;
+
+export const TotalPriceNumber = styled.div`
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding-bottom: 30px;
+`;
+
+export const CheckoutButtonContainer = styled.div`
+  margin: 0 auto 20px auto;
 `;
 
 export const IfCartEmpty = styled.div`
@@ -88,6 +110,5 @@ export const IfCartEmpty = styled.div`
   font-size: 20px;
   line-height: 30px;
   color: #d0d0d0;
-
   margin: 20px 0 0 20px;
 `;

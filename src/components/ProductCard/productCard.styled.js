@@ -7,16 +7,8 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  transition: box-shadow 400ms cubic-bezier(0.02, 0.01, 0.47, 1),
-    transform 200ms cubic-bezier(0.02, 0.01, 0.47, 1);
-  color: #4b4f56;
-  &:hover,
-  &:focus {
-    transform: scale3d(1.05, 1.05, 1);
-    &::after {
-      opacity: 1;
-    }
+  &:hover {
+    box-shadow: 6px 6px 12px 0 rgb(0, 0, 0, 0.14);
   }
 `;
 

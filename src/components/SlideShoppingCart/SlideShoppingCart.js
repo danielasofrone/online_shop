@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {showTotalAmount} from '../../shared/utils';
 import CartProductCard from '../SlideShoppingCart/CartProductCard/CartProductCard';
 import leftArow from '../../assets/icons/leftArow.svg';
+import Button from '../Button/Button';
 import * as S from './slideShoppingCart.styled';
 
 const SlideShoppingCart = ({shoppingCart, closeCart}) => {
@@ -28,9 +29,15 @@ const SlideShoppingCart = ({shoppingCart, closeCart}) => {
           )}
         </S.ItemsContainer>
         <S.BottomContainer>
-          <S.TotalPrice>
-            Subtotal: <strong>{showTotalAmount(shoppingCart)}</strong>
-          </S.TotalPrice>
+          <S.TotalPriceContainer>
+            <S.TotalPriceText>Subtotal:</S.TotalPriceText>
+            <S.TotalPriceNumber>
+              <strong>{showTotalAmount(shoppingCart)}</strong>
+            </S.TotalPriceNumber>
+          </S.TotalPriceContainer>
+          <S.CheckoutButtonContainer>
+            <Button isSmall>CHECK OUT</Button>
+          </S.CheckoutButtonContainer>
         </S.BottomContainer>
       </S.ProductsSubcontainer>
     </S.ProductsContainer>
