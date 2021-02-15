@@ -7,7 +7,8 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: box-shadow 200ms cubic-bezier(0.02, 0.01, 0.47, 1),
+
+  transition: box-shadow 400ms cubic-bezier(0.02, 0.01, 0.47, 1),
     transform 200ms cubic-bezier(0.02, 0.01, 0.47, 1);
   color: #4b4f56;
   &:hover,
@@ -42,7 +43,7 @@ export const CardContent = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   line-height: 25px;
   font-size: 20px;
   color: #333;
@@ -73,6 +74,9 @@ export const AddButton = styled.div`
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   border-top: 1px solid #d0d0d0;
+  &:hover {
+    background-color: #f8f8f8;
+  }
 `;
 
 export const FavoritesButton = styled.div`
@@ -83,6 +87,9 @@ export const FavoritesButton = styled.div`
   align-items: center;
   width: 100%;
   color: #333;
+  &:hover {
+    background-color: #f8f8f8;
+  }
 `;
 
 export const Icon = styled.img`

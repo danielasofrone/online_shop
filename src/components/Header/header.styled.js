@@ -10,17 +10,32 @@ export const Header = styled.header`
   background-color: #000;
 `;
 
-export const Logo = styled.div`
+export const LogoContainer = styled.div`
   float: left;
   margin-left: 30px;
-  color: #fff;
-  margin-bottom: 20px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+`;
+
+export const LogoText = styled.div`
+  color: #fff;
   h2 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 600;
     font-size: 30px;
   }
+`;
+
+export const Logo = styled.div`
+  margin-top: 22px;
+`;
+
+export const LogoIcon = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: -15px;
 `;
 
 export const ItemsCountBubble = styled.header`

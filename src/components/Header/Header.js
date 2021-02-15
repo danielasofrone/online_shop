@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import SlideShoppingCart from '../SlideShoppingCart/SlideShoppingCart';
 import {calculateCartProductQuantity} from '../../shared/utils';
+import corner from '../../assets/icons/corner.svg';
 import * as S from './header.styled';
 
 const Header = ({shoppingCart}) => {
@@ -18,10 +19,14 @@ const Header = ({shoppingCart}) => {
 
   return (
     <S.Header>
-      <S.Logo>
-        <h2> The Corner Shop</h2>
-      </S.Logo>
-
+      <S.LogoContainer>
+        <S.Logo>
+          <S.LogoIcon src={corner} />
+        </S.Logo>
+        <S.LogoText>
+          <h2> The Corner Shop</h2>
+        </S.LogoText>
+      </S.LogoContainer>
       {openSlideCart && <SlideShoppingCart closeCart={handleCloseCart} />}
       <S.ShoppingCartButton onClick={handleOpenCart}>
         <svg

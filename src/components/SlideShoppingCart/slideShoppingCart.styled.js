@@ -33,6 +33,9 @@ export const BackButtonContainer = styled.div`
   left: 0;
   background-color: #fff;
   cursor: pointer;
+  &:hover {
+    background-color: #f8f8f8;
+  }
 `;
 
 export const ItemsContainer = styled.div`
